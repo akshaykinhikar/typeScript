@@ -32,5 +32,11 @@ var ProductListCtrl = (function () {
             }
         ];
     }
+    ProductListCtrl.prototype.toggleImage = function () {
+        this.showImage = !this.showImage;
+    };
     return ProductListCtrl;
 }());
+angular
+    .module("productManagement")
+    .controller("ProductListCtrl", ProductListCtrl);
