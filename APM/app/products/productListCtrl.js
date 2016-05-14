@@ -38,9 +38,8 @@ var app;
                 console.log(this.products);
                 console.log(app.domain);
                 var newProduct = new app.domain.Product(3, "saw", "txb-002", new Date(2002, 3, 1), "15-5 inches hand saw", 16, "http://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png");
-                // console.log(newProduct);
-                // newProduct.price = newProduct.calculateDiscount(10);
-                // this.products.push(newProduct);
+                newProduct.price = newProduct.calculateDiscount(10);
+                this.products.push(newProduct);
             }
             ProductListCtrl.prototype.toggleImage = function () {
                 this.showImage = !this.showImage;
